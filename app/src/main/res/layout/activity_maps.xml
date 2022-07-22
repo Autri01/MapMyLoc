@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search for the place." />
+
+    <Button
+        android:id="@+id/btnNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_back"
+        android:text="Shortest Path"
+        android:visibility="invisible"
+        app:cornerRadius="20dp" />
+
+    <LinearLayout
+        android:id="@+id/lvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNav"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            app:cornerRadius="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_back"
+            android:text="Navigation path based on traffic"
+            android:textSize="9sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/bynPoly"
+            android:layout_width="0dp"
+            android:visibility="invisible"
+            android:textSize="9sp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_back"
+            app:cornerRadius="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Draw direct polyline"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvLayout"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/btn_back"
+        app:cornerRadius="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Clear"
+        android:visibility="invisible" />
+
+
+
+
+
+</RelativeLayout>
