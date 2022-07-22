@@ -3,5 +3,5 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_map_act_java">MapActJava</string>
     <string name="title_activity_map_location">MapLocation</string>
-    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyA8uB-rCxklcINNKIFlUgQ8WpMpJt1SVr8</string>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">Place Your API HERE</string>
 </resources>
